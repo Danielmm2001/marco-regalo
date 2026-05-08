@@ -15,33 +15,29 @@
       --accent:#cb7a8b; --text:#6e4a52;
     }
 
-    html, body { width: 100%; min-height: 100%; }
-    body {
+    html, body {
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 10% 8%, rgba(255,255,255,.45), transparent 36%),
-        radial-gradient(circle at 90% 90%, rgba(255,255,255,.5), transparent 30%),
-        var(--pink-bg);
+      background-color: var(--pink-bg);
+      background-image:
+        linear-gradient(rgba(255, 245, 247, .22), rgba(255, 245, 247, .22)),
+        url('fondo-comunion.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
-    body::before {
-      content: "✧   ✝   ✧     🕊   ✧     ✝   ✧\A\A  ✧     🙏     ✧      ✝    ✧\A\A ✧   ✝    ✧   🕊    ✧   ✝   ✧";
-      white-space: pre;
-      position: fixed;
-      inset: 0;
-      color: var(--pink-line);
-      font-size: clamp(20px, 2vw, 30px);
-      line-height: 2.5;
-      letter-spacing: .5rem;
-      opacity: .33;
-      pointer-events: none;
-      text-align: center;
-      padding-top: 5vh;
+
+    @media (min-aspect-ratio: 16/9) {
+      body { background-size: 100% auto; }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+      body { background-size: auto 100%; }
     }
 
     .scene {
