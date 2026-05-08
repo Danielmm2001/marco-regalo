@@ -16,6 +16,11 @@
     }
 
     html, body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
       display: flex;
@@ -24,20 +29,12 @@
       overflow: hidden;
       background-color: var(--pink-bg);
       background-image:
-        linear-gradient(rgba(255, 245, 247, .22), rgba(255, 245, 247, .22)),
+        linear-gradient(rgba(255, 245, 247, .16), rgba(255, 245, 247, .16)),
         url('fondo-comunion.jpg');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-    }
-
-
-    @media (min-aspect-ratio: 16/9) {
-      body { background-size: 100% auto; }
-    }
-
-    @media (max-aspect-ratio: 16/9) {
-      body { background-size: auto 100%; }
+      background-attachment: fixed;
     }
 
     .scene {
